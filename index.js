@@ -371,7 +371,8 @@ const model_id = "Xenova/slimsam-77-uniform";
 statusLabel.textContent = "Loading model...";
 const model = await SamModel.from_pretrained(model_id, {
   dtype: "fp16", // or "fp32"
-  device: "wasm",
+  //   device: "wasm",
+  device: "webgpu",
 });
 const processor = await AutoProcessor.from_pretrained(model_id);
 statusLabel.textContent = "Ready";
