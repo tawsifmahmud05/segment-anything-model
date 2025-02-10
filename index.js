@@ -370,7 +370,7 @@ function measureMaskHeight() {
 const model_id = "Xenova/slimsam-77-uniform";
 statusLabel.textContent = "Loading model...";
 const model = await SamModel.from_pretrained(model_id, {
-  dtype: "fp16", // or "fp32"
+  dtype: "fp32", // or "fp32"
   //   device: "wasm",
   device: "webgpu",
 });
