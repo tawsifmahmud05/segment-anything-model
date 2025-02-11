@@ -157,9 +157,7 @@ async function encode(url) {
   isEncoding = true;
   statusLabel.textContent = "Extracting image embedding...";
 
-  imageInput = await RawImage.fromURL(url, {
-    resize: { width: 256, height: 256 }, // Reduce input size
-  });
+  imageInput = await RawImage.fromURL(url);
 
   // Create a new image object to get dimensions
   const img = new Image();
